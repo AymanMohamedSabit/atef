@@ -29,7 +29,7 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const targetDate = new Date("2026-09-18T19:00:00").getTime();
+    const targetDate = new Date("2026-09-19T21:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
         <div className={`absolute bottom-0 left-0 right-0 h-[60%] ${theme.envInside} z-40 pointer-events-none`} style={{ clipPath: 'polygon(0 100%, 50% 0, 100% 100%)' }}></div>
         <div className={`absolute top-0 left-0 right-0 h-[60%] ${theme.envDark} origin-top z-50`} style={{ clipPath: 'polygon(0 0, 50% 100%, 100% 0)' }}>
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65px] h-[65px] ${theme.primaryBg} rounded-full text-white flex justify-center items-center font-[family-name:var(--font-great-vibes)] text-3xl shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-[60]`}>M&K</div>
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65px] h-[65px] ${theme.primaryBg} rounded-full text-white flex justify-center items-center font-[family-name:var(--font-great-vibes)] text-3xl shadow-[0_4px_10px_rgba(0,0,0,0.2)] z-[60]`}>M&H</div>
         </div>
         <div className={`absolute -bottom-[50px] left-1/2 -translate-x-1/2 font-bold ${theme.accentText} bg-white px-8 py-3 rounded-full shadow-[0_4px_10px_rgba(0,0,0,0.1)] animate-bounce whitespace-nowrap z-[70] text-xl`}>حفل زفاف</div>
       </div>
@@ -132,22 +132,20 @@ export default function Home() {
 
           {/* Families Section */}
           <motion.div initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.3 }} className="flex flex-col items-center text-center px-4 max-w-3xl z-10 w-full mb-10">
-            <p className={`text-2xl sm:text-3xl ${theme.accentText} mb-12 font-bold`}>بكل الحب والسرور، تتشرف</p>
+            <p className={`text-2xl sm:text-3xl ${theme.accentText} mb-12 font-bold`}>بكل الحب والسرور، يتشرف</p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-10 w-full mb-12">
-              {/* First Family */}
+              {/* First Host */}
               <div className="flex flex-col items-center justify-center gap-4">
-                <span className="text-4xl sm:text-5xl font-bold text-[#4a4a4a] font-[family-name:var(--font-amiri)]">عائلة فرحات</span>
-                <span className={`text-2xl sm:text-3xl ${theme.accentBg} text-white px-8 py-2 rounded-full font-bold shadow-md whitespace-nowrap`}>الحاج / وليد مجدي فرحات</span>
+                <span className={`text-2xl sm:text-3xl ${theme.accentBg} text-white px-8 py-3 rounded-full font-bold shadow-md whitespace-nowrap`}>الحاج / عاطف عبد الصبور</span>
               </div>
 
               {/* Ampersand */}
               <span className={`text-5xl ${theme.primaryText} font-[family-name:var(--font-amiri)]`}>&</span>
               
-              {/* Second Family */}
+              {/* Second Host */}
               <div className="flex flex-col items-center justify-center gap-4">
-                <span className="text-4xl sm:text-5xl font-bold text-[#4a4a4a] font-[family-name:var(--font-amiri)]">عائلة إمام</span>
-                <span className={`text-2xl sm:text-3xl ${theme.accentBg} text-white px-8 py-2 rounded-full font-bold shadow-md whitespace-nowrap`}>الأستاذ / ماجد محمد إمام</span>
+                <span className={`text-2xl sm:text-3xl ${theme.accentBg} text-white px-8 py-3 rounded-full font-bold shadow-md whitespace-nowrap`}>الأستاذ / مصطفى عاطف عبد الصبور</span>
               </div>
             </div>
             
@@ -156,12 +154,12 @@ export default function Home() {
           
           {/* Main Titles (Big Names) */}
           <div className="relative z-10 flex flex-col items-center justify-center mb-16">
-            <motion.h1 initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.5 }} className="font-[family-name:var(--font-amiri)] text-7xl sm:text-9xl text-[#4a4a4a] mb-4 sm:mb-6 font-bold drop-shadow-md">محمد & قمر</motion.h1>
+            <motion.h1 initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.5 }} className="font-[family-name:var(--font-amiri)] text-7xl sm:text-9xl text-[#4a4a4a] mb-4 sm:mb-6 font-bold drop-shadow-md">محمد & هدير</motion.h1>
             
             <motion.div initial="hidden" animate={isOpen ? "visible" : "hidden"} variants={fadeInUp} transition={{ delay: 1.7 }} className={`font-[family-name:var(--font-playfair)] text-3xl sm:text-5xl ${theme.secondaryText} tracking-[6px] sm:tracking-[10px] uppercase font-bold drop-shadow-sm leading-tight mb-8`}>
               <span className="block sm:inline">MOHAMED</span>
               <span className="block sm:inline text-2xl sm:text-5xl sm:mx-4 my-2 sm:my-0">&</span>
-              <span className="block sm:inline">KAMAR</span>
+              <span className="block sm:inline">HADEER</span>
             </motion.div>
           </div>
 
@@ -172,18 +170,38 @@ export default function Home() {
             </p>
 
             {/* Event Details Card */}
-            <div className={`bg-white/80 p-8 sm:p-12 rounded-3xl shadow-xl border-2 ${theme.border} w-full max-w-2xl mb-16 flex flex-col gap-6 text-right backdrop-blur-md`}>
+            <div className={`bg-white/90 p-8 sm:p-12 rounded-3xl shadow-xl border-2 ${theme.border} w-full max-w-2xl mb-16 flex flex-col gap-6 text-right backdrop-blur-md`}>
+              
+              <div className="flex items-center gap-4 mb-2">
+                <span className="text-3xl sm:text-4xl">💍</span>
+                <span className="text-2xl sm:text-4xl font-bold text-[#4a4a4a] leading-relaxed">حفل الزفاف:</span>
+              </div>
               <div className="flex items-center gap-4">
                 <span className="text-3xl sm:text-4xl">🗓</span>
-                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">التاريخ: الجمعة، ١٨ سبتمبر ٢٠٢٦ م</span>
+                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">السبت، ١٩ سبتمبر ٢٠٢٦ م</span>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-3xl sm:text-4xl">🕖</span>
-                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a]">الموعد: الساعة 7:00 مساءً</span>
+                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a]">الساعة 9:00 مساءً</span>
+              </div>
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-3xl sm:text-4xl">📍</span>
+                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">فندق القوات المسلحة بالمنيا - قاعة الماريوت</span>
+              </div>
+
+              <div className="w-full h-[2px] bg-gray-200 my-4"></div>
+
+              <div className="flex items-center gap-4 mb-2 mt-2">
+                <span className="text-3xl sm:text-4xl">🍽️</span>
+                <span className="text-2xl sm:text-4xl font-bold text-[#4a4a4a] leading-relaxed">الغداء:</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="text-3xl sm:text-4xl">🗓</span>
+                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">الخميس، ١٧ سبتمبر ٢٠٢٦ م</span>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-3xl sm:text-4xl">📍</span>
-                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">المكان: فندق لي سيل - قاعة لي سيل</span>
+                <span className="text-xl sm:text-3xl font-bold text-[#4a4a4a] leading-relaxed">أمام المنزل</span>
               </div>
             </div>
 
@@ -196,7 +214,7 @@ export default function Home() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="w-full max-w-[800px] px-5 flex flex-col items-center text-center z-10 mb-20">
             <motion.div whileHover={{ scale: 1.02 }} className={`w-full h-[350px] sm:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 ${theme.border} mb-12 bg-gray-200`}>
               <iframe 
-                src="https://maps.google.com/maps?q=Le%20Ciel%20Hotel,%20Cairo&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=فندق%20القوات%20المسلحة%20بالمنيا&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -207,7 +225,7 @@ export default function Home() {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="https://maps.app.goo.gl/zkqe5JG3N5UvJuSP9?g_st=aw" target="_blank" className={`inline-flex items-center justify-center gap-3 ${theme.secondaryBg} text-white px-8 py-4 rounded-full no-underline font-bold text-xl transition-all duration-500 hover:opacity-90 shadow-lg w-full sm:w-auto`}>
+              <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="https://www.google.com/maps/search/?api=1&query=فندق+القوات+المسلحة+بالمنيا" target="_blank" className={`inline-flex items-center justify-center gap-3 ${theme.secondaryBg} text-white px-8 py-4 rounded-full no-underline font-bold text-xl transition-all duration-500 hover:opacity-90 shadow-lg w-full sm:w-auto`}>
                 <MapPin className="w-6 h-6" />
                 فتح في خرائط جوجل
               </motion.a>
